@@ -1,6 +1,5 @@
 const test = require('tape')
 const NoiseState = require('../noise.js')
-// const curve = require('noise-curve-secp')
 
 test('IK', t => {
   const initiator = new NoiseState('IK', true, null)
