@@ -1,15 +1,15 @@
-const sodium = require('sodium-universal')
+const sodium = require('sodium-javascript')
 const assert = require('nanoassert')
 const b4a = require('b4a')
 const CipherState = require('./cipher')
-const curve = require('./dh')
+const curve = require('@backbonedao/noise-curve-secp256k1')
 const { HASHLEN, hkdf } = require('./hkdf')
 
 module.exports = class SymmetricState extends CipherState {
   constructor (opts = {}) {
     super()
 
-    this.curve = opts.curve || curve
+    this.curve = curve
     this.digest = b4a.alloc(HASHLEN)
     this.chainingKey = null
     this.offset = 0

@@ -18,7 +18,7 @@ function hkdf (salt, inputKeyMaterial, info = '', length = 2 * HASHLEN) {
   return [k1, k2]
 
   function hkdfExtract (salt, inputKeyMaterial) {
-    return hmacDigest(salt, inputKeyMaterial)
+    return hmacDigest(salt, b4a.from(inputKeyMaterial))
   }
 
   function hkdfExpand (key, info, length) {

@@ -1,22 +1,32 @@
 {
-  "name": "noise-handshake",
-  "version": "2.2.0",
+  "name": "@backbonedao/noise-handshake",
+  "version": "1.0.0",
   "description": "",
   "main": "noise.js",
   "scripts": {
-    "test": "standard && tape test/*.js"
+    "test": "tape test/*.js"
   },
-  "author": "",
-  "license": "ISC",
+  "contributors": [
+    {
+      "name": "backbone://dao",
+      "email": "team@backbonedao.com",
+      "url": "https://backbonedao.com"
+    },
+    {
+      "name": "Christophe Diederichs"
+    }
+  ],
+  "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chm-diederichs/noise-handshake.git"
+    "url": "git+https://github.com/backbonedao/noise-handshake.git"
   },
   "dependencies": {
+    "@backbonedao/noise-curve-secp256k1": "github:backbonedao/noise-curve-secp256k1",
     "b4a": "^1.1.0",
     "hmac-blake2b": "^2.0.0",
     "nanoassert": "^2.0.0",
-    "sodium-universal": "^3.0.4"
+    "sodium-javascript": "^0.8.0"
   },
   "devDependencies": {
     "noise-protocol": "chm-diederichs/noise-protocol.git#xx-ephemeral-key",

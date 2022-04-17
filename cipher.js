@@ -1,4 +1,4 @@
-const sodium = require('sodium-universal')
+const sodium = require('sodium-javascript')
 const b4a = require('b4a')
 
 module.exports = class CipherState {
